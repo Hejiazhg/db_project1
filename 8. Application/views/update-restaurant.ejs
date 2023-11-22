@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Restaurant</title>
+</head>
+<body>
+  <h1>Update Restaurant</h1>
+  <form action="/update-restaurant/<%= restaurant.ID %>" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<%= restaurant.Name %>" required><br>
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" value="<%= restaurant.Location %>" required><br>
+    <!-- Add other input fields as needed, pre-filling with existing data -->
+    <button type="submit">Update</button>
+  </form>
+  <p><a href="/restaurants">Back to Restaurants</a></p>
+</body>
+</html>
